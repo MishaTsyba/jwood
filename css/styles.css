@@ -1,0 +1,297 @@
+/* fonts section */
+
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('../fonts/nexa_bold-webfont.woff2') format('woff2'), url('../fonts/nexa_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa_lightregular';
+    src: url('../fonts/nexa_light-webfont.woff2') format('woff2'), url('../fonts/nexa_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'felt_tip_womanregular';
+    src: url('../fonts/felt_tip_woman-webfont.woff2') format('woff2'), url('../fonts/felt_tip_woman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* end of fonts section */
+
+
+/* text fotmat section */
+
+a,
+.logoText span,
+.authorText h1,
+.portfolio>p,
+.contacts p:nth-child(4),
+footer {
+    font-family: 'nexa_lightregular', Arial, sans-serif;
+    color: #d8d8d8;
+    text-transform: uppercase;
+}
+
+a {
+    font-weight: 400;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+figcaption,
+.actionScroll,
+.logoText span:first-child,
+.contacts p:nth-child(odd) {
+    font-family: 'nexa_boldregular', Arial, sans-serif;
+    color: #d8d8d8;
+    text-transform: uppercase;
+}
+
+.authorText p,
+.authorText h1,
+.contacts p:nth-child(odd),
+.contacts a:first-child,
+.contacts p:nth-child(4) {
+    color: #202020;
+}
+
+.authorText p {
+    font-family: 'OpenSans', Arial, sans-serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    line-height: 2.083;
+}
+
+.authorText p:last-child {
+    font-family: 'felt_tip_womanregular', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 2.2em;
+}
+
+.portfolio>p,
+.authorText>h1 {
+    font-size: 3.75em;
+    font-weight: 400;
+    line-height: 2;
+}
+
+figcaption {
+    color: #f1f1f1;
+    font-size: 2.25em;
+    font-weight: 400;
+}
+
+.logoText {
+    color: #f1f1f1;
+    font-size: 3.75em;
+}
+
+.actionScroll p {
+    font-weight: 400;
+    font-size: 1.125em;
+}
+
+.contacts {
+    font-size: 3em;
+}
+
+
+/* end of text fotmat section */
+
+
+/* image and color section */
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background-image: url(../img/bgheader.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.portfolio {
+    background-image: url(../img/bgportfolio.png);
+}
+
+.portfolio {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* end of image and color section */
+
+
+/* srtucture section */
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    width: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section {
+    padding-top: 40px;
+}
+
+header,
+nav,
+section,
+.author,
+.photoGallery,
+footer {
+    display: flex;
+}
+
+header,
+.authorInfo,
+.portfolio,
+.photoGallery,
+#contacts {
+    flex-flow: column wrap;
+}
+
+nav,
+.author,
+.photoGallery1,
+.photoGallery2 {
+    flex-flow: row wrap;
+}
+
+.author {
+    justify-content: space-around;
+}
+
+nav {
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+nav a {
+    margin-right: 50px;
+    text-align: center;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    margin: 0;
+    margin-top: 148px;
+}
+
+figcaption {
+    margin-left: -53px;
+}
+
+.logoText {
+    text-align: center;
+    margin-top: 148px;
+}
+
+header>.actionScroll {
+    text-align: center;
+}
+
+.actionScroll {
+    text-align: center;
+    margin-top: 148px;
+}
+
+.authorInfo,
+.portfolio {
+    padding-bottom: 40px;
+}
+
+.portfolio>.actionScroll {
+    margin-top: 81px;
+}
+
+.author {
+    margin: 0 12.5%;
+    padding-top: 80px;
+}
+
+.authorInfo>.actionScroll {
+    margin-top: 80px;
+}
+
+.authorPhoto {
+    margin-right: 50px;
+}
+
+.authorPhoto img {
+    width: 100%;
+}
+
+
+
+header>nav,
+.portfolio>nav {
+    border-bottom: 1px solid #ffffff;
+    margin: 0 3.5%;
+}
+
+.authorInfo>nav,
+#contacts>nav {
+    border-bottom: 1px solid #d8d8d8;
+    margin: 0 3.5%;
+}
+
+.photoGallery {
+    justify-content: center;
+}
+
+.photoGallery1,
+.photoGallery2 {
+    display: flex;
+    justify-content: center;
+}
+
+.photoGallery1>img,
+.photoGallery2>img {
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.photoGallery1>img:last-child,
+.photoGallery2>img:last-child {
+    margin-right: 0;
+}
+
+.portfolio>p,
+.contacts>p {
+    text-align: center;
+}
+
+footer {
+    line-height: 2em;
+    border-top: 1px solid #d8d8d8;
+    margin: 0 3.5%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* end of srtucture section */
