@@ -1,2 +1,2 @@
 # jwood
-[Jason Wood] (https://mishatsyba.github.io/jwood/)
+[Jason Wood template](https://mishatsyba.github.io/jwood/)
