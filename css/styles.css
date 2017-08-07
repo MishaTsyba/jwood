@@ -1,297 +1,481 @@
-/* fonts section */
+    /* fonts section */
+    
+    @font-face {
+        font-family: 'nexa_boldregular';
+        src: url('../fonts/nexa_bold-webfont.woff2') format('woff2'), url('../fonts/nexa_bold-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'nexa_lightregular';
+        src: url('../fonts/nexa_light-webfont.woff2') format('woff2'), url('../fonts/nexa_light-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'felt_tip_womanregular';
+        src: url('../fonts/felt_tip_woman-webfont.woff2') format('woff2'), url('../fonts/felt_tip_woman-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    /* end of fonts section */
+    /* text fotmat section */
+    
+    a,
+    .logoText span,
+    .authorText h1,
+    .portfolio>span,
+    .contacts p:nth-child(4),
+    footer {
+        font-family: 'nexa_lightregular', Arial, sans-serif;
+        color: #d8d8d8;
+        text-transform: uppercase;
+    }
+    
+    a {
+        font-weight: 400;
+        font-size: 1.4em;
+        text-decoration: none;
+    }
+    
+    figcaption,
+    .actionScroll,
+    .logoText span:first-child,
+    .contacts p:nth-child(odd) {
+        font-family: 'nexa_boldregular', Arial, sans-serif;
+        color: #d8d8d8;
+        text-transform: uppercase;
+    }
+    
+    .authorText p,
+    .authorText h1,
+    .contacts p:nth-child(odd),
+    .contacts p:nth-child(4) {
+        color: #202020;
+    }
+    
+    .authorText p {
+        font-family: 'OpenSans', Arial, sans-serif;
+        font-size: 1.6em;
+        font-weight: 300;
+        line-height: 2;
+    }
+    
+    .authorText p:last-child {
+        font-family: 'felt_tip_womanregular', Arial, sans-serif;
+        font-weight: 600;
+        font-size: 2.2em;
+    }
+    
+    .portfolio>span,
+    .authorText>h1 {
+        font-size: 3.75em;
+        font-weight: 400;
+        line-height: 2;
+    }
+    
+    .logo p {
+        color: #f1f1f1;
+        font-size: 2.25em;
+        font-weight: 400;
+    }
+    
+    .logoText {
+        color: #f1f1f1;
+        font-size: 3.75em;
+    }
+    
+    .actionScroll p {
+        font-weight: 400;
+        font-size: 1.125em;
+    }
+    
+    .authorInfo .actionScroll p {
+        color: #333333;
+    }
+    
+    .contacts {
+        font-size: 3em;
+    }
+    
+    #contacts p>a {
+        color: #202020;
+    }
+    /* end of text fotmat section */
+    /* image and color section */
+    
+    .container {
+        background-color: #ffffff;
+    }
+    
+    header {
+        background-image: url(../img/bgheader.png);
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .portfolio {
+        background-image: url(../img/bgportfolio.png);
+    }
+    
+    .portfolio {
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    /* end of image and color section */
+    /* srtucture section */
+    
+    .container {
+        max-width: 1920px;
+        width: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    header {
+        width: auto;
+        flex-flow: column nowrap;
+        padding-bottom: 27px;
+    }
+    
+    nav {
+        justify-content: center;
+        position: fixed;
+        margin: 0 3.125%;
+        padding: 25px 31.25%;
+        border-bottom: 2px solid #d8d8d8;
+        flex-flow: row nowrap;
+    }
+    
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    li a {
+        padding: 0 15px;
+        text-align: center;
+        flex: 1 1 25%;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 200px;
+    }
+    
+    .logo div {
+        position: relative;
+    }
+    
+    .logo p {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .logoText {
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    header>.actionScroll {
+        padding-top: 60px;
+    }
+    
+    .actionScroll {
+        justify-content: center;
+        text-align: center;
+        padding-top: 25px;
+    }
+    
+    header,
+    nav,
+    section,
+    .author,
+    .actionScroll,
+    .photoGallery,
+    footer {
+        display: flex;
+    }
+    
+    .authorInfo,
+    .actionScroll,
+    .portfolio,
+    #contacts {
+        flex-flow: column wrap;
+    }
+    
+    .author,
+    .photoGallery {
+        flex-flow: row wrap;
+    }
+    
+    .authorInfo {
+        padding-top: 115px;
+    }
+    
+    .author {
+        margin: 0 8.3%;
+        justify-content: flex-start;
+        flex-flow: row nowrap;
+    }
+    
+    .authorPhoto {
+        text-align: center;
+    }
+    
+    .authorText {
+        margin-left: 50px;
+        max-width: 45%;
+    }
+    
+    .portfolio {
+        text-align: center;
+        padding-bottom: 75px;
+    }
+    
+    .portfolio span {
+        display: inline-block;
+        text-align: center;
+        padding-top: 135px;
+        padding-bottom: 35px;
+    }
+    
+    .photoGallery {
+        justify-content: center;
+        padding-bottom: 75px;
+    }
+    
+    .photoGallery img {
+        max-width: 100%;
+        margin: 0.75%;
+        border: 1px solid #a8a8a8;
+        transition: 0.5s all;
+        box-sizing: border-box;
+    }
+    
+    .photoGallery img:hover {
+        box-shadow: 0 0 8px 4px #e8e8e8;
+    }
 
-@font-face {
-    font-family: 'nexa_boldregular';
-    src: url('../fonts/nexa_bold-webfont.woff2') format('woff2'), url('../fonts/nexa_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+.portfolio .actionScroll {
+    padding-top: 45px;
 }
-
-@font-face {
-    font-family: 'nexa_lightregular';
-    src: url('../fonts/nexa_light-webfont.woff2') format('woff2'), url('../fonts/nexa_light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'felt_tip_womanregular';
-    src: url('../fonts/felt_tip_woman-webfont.woff2') format('woff2'), url('../fonts/felt_tip_woman-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* end of fonts section */
-
-
-/* text fotmat section */
-
-a,
-.logoText span,
-.authorText h1,
-.portfolio>p,
-.contacts p:nth-child(4),
-footer {
-    font-family: 'nexa_lightregular', Arial, sans-serif;
-    color: #d8d8d8;
-    text-transform: uppercase;
-}
-
-a {
-    font-weight: 400;
-    font-size: 1.4em;
-    text-decoration: none;
-}
-
-figcaption,
-.actionScroll,
-.logoText span:first-child,
-.contacts p:nth-child(odd) {
-    font-family: 'nexa_boldregular', Arial, sans-serif;
-    color: #d8d8d8;
-    text-transform: uppercase;
-}
-
-.authorText p,
-.authorText h1,
-.contacts p:nth-child(odd),
-.contacts a:first-child,
-.contacts p:nth-child(4) {
-    color: #202020;
-}
-
-.authorText p {
-    font-family: 'OpenSans', Arial, sans-serif;
-    font-size: 1.8em;
-    font-weight: 300;
-    line-height: 2.083;
-}
-
-.authorText p:last-child {
-    font-family: 'felt_tip_womanregular', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 2.2em;
-}
-
-.portfolio>p,
-.authorText>h1 {
-    font-size: 3.75em;
-    font-weight: 400;
-    line-height: 2;
-}
-
-figcaption {
-    color: #f1f1f1;
-    font-size: 2.25em;
-    font-weight: 400;
-}
-
-.logoText {
-    color: #f1f1f1;
-    font-size: 3.75em;
-}
-
-.actionScroll p {
-    font-weight: 400;
-    font-size: 1.125em;
-}
-
-.contacts {
-    font-size: 3em;
-}
-
-
-/* end of text fotmat section */
-
-
-/* image and color section */
-
-body {
-    background-color: #ffffff;
-}
-
-header {
-    background-image: url(../img/bgheader.png);
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.portfolio {
-    background-image: url(../img/bgportfolio.png);
-}
-
-.portfolio {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-/* end of image and color section */
-
-
-/* srtucture section */
-
-body {
-    width: 100%;
-    margin: 0 auto;
-}
-
-header {
-    width: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-section {
-    padding-top: 40px;
-}
-
-header,
-nav,
-section,
-.author,
-.photoGallery,
-footer {
-    display: flex;
-}
-
-header,
-.authorInfo,
-.portfolio,
-.photoGallery,
-#contacts {
-    flex-flow: column wrap;
-}
-
-nav,
-.author,
-.photoGallery1,
-.photoGallery2 {
-    flex-flow: row wrap;
-}
-
-.author {
-    justify-content: space-around;
-}
-
-nav {
-    justify-content: center;
-    padding-bottom: 40px;
-}
-
-nav a {
-    margin-right: 50px;
-    text-align: center;
-}
-
-nav a:last-child {
-    margin-right: 0;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-}
-
-figure {
-    margin: 0;
-    margin-top: 148px;
-}
-
-figcaption {
-    margin-left: -53px;
-}
-
-.logoText {
-    text-align: center;
-    margin-top: 148px;
-}
-
-header>.actionScroll {
-    text-align: center;
-}
-
-.actionScroll {
-    text-align: center;
-    margin-top: 148px;
-}
-
-.authorInfo,
-.portfolio {
-    padding-bottom: 40px;
-}
-
-.portfolio>.actionScroll {
-    margin-top: 81px;
-}
-
-.author {
-    margin: 0 12.5%;
-    padding-top: 80px;
-}
-
-.authorInfo>.actionScroll {
-    margin-top: 80px;
-}
-
-.authorPhoto {
-    margin-right: 50px;
-}
-
-.authorPhoto img {
-    width: 100%;
-}
-
-
-
-header>nav,
-.portfolio>nav {
-    border-bottom: 1px solid #ffffff;
-    margin: 0 3.5%;
-}
-
-.authorInfo>nav,
-#contacts>nav {
-    border-bottom: 1px solid #d8d8d8;
-    margin: 0 3.5%;
-}
-
-.photoGallery {
-    justify-content: center;
-}
-
-.photoGallery1,
-.photoGallery2 {
-    display: flex;
-    justify-content: center;
-}
-
-.photoGallery1>img,
-.photoGallery2>img {
-    margin-right: 50px;
-    margin-top: 50px;
-}
-
-.photoGallery1>img:last-child,
-.photoGallery2>img:last-child {
-    margin-right: 0;
-}
-
-.portfolio>p,
-.contacts>p {
-    text-align: center;
-}
-
-footer {
-    line-height: 2em;
-    border-top: 1px solid #d8d8d8;
-    margin: 0 3.5%;
-    display: flex;
-    justify-content: center;
-}
-
-
-/* end of srtucture section */
+    
+    .contacts {
+        padding-top: 70px;
+    }
+    
+    .contacts>p {
+        text-align: center;
+    }
+    
+    .socialIcons {
+        text-align: center;
+    }
+    
+    .fa {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        font-size: 44px;
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .fa:hover {
+        background: black;
+        color: white;
+    }
+    
+    .socialIcons .fa-facebook {
+        color: black;
+    }
+    
+    .socialIcons .fa-facebook:hover {
+        color: white;
+    }
+    
+    .fa-twitter {
+        background: white;
+        color: black;
+    }
+    
+    .fa-instagram {
+        background: white;
+        color: black;
+    }
+    
+    #contacts {
+        padding-bottom: 14vh;
+    }
+    
+    footer {
+        line-height: 2em;
+        border-top: 1px solid #d8d8d8;
+        margin: 0 3.5%;
+        display: flex;
+        justify-content: center;
+    }
+    /* end of srtucture section */
+    /* media queries section */
+    
+    @media (max-width:1740px) {
+        nav {
+            border: 0;
+        }
+    }
+    
+    @media (min-width: 1532px) and (max-width:1720px) {
+        .author {
+            margin: 0 8.3%;
+            justify-content: center;
+        }
+        .authorPhoto img {
+            display: none;
+        }
+        .authorText {
+            margin-left: 0px;
+            text-align: center;
+            max-width: 75%;
+        }
+        .authorText p:last-child {
+            text-align: right;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width:1532px) {
+        li a {
+            font-weight: 600;
+            font-size: 1em;
+        }
+        .actionScroll p:first-child {
+            display: none;
+        }
+        .actionScroll {
+            padding-bottom: 85px;
+        }
+        header .scrollButton {
+            width: 7%;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .authorInfo .scrollButton {
+            width: 7%;
+            border: 2px solid black;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .portfolio .scrollButton {
+            width: 7%;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .author {
+            margin: 0 8.3%;
+            justify-content: center;
+        }
+        .authorPhoto img {
+            display: none;
+        }
+        .authorText {
+            margin-left: 0px;
+            text-align: center;
+            max-width: 75%;
+        }
+        .authorText>h1 {
+            font-size: 3.5em;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+        .authorText p {
+            font-size: 2.2em;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .authorText p:last-child {
+            text-align: right;
+        }
+        #contacts p>a {
+            font-size: 1.2em;
+        }
+    }
+    
+@media (max-width:768px) {
+        li a {
+            font-weight: 600;
+            font-size: 1em;
+        }
+        .logoText {
+            font-size: 2em;
+        }
+        .actionScroll p:first-child {
+            display: none;
+        }
+        .actionScroll {
+            padding-bottom: 85px;
+        }
+        header .scrollButton {
+            width: 12%;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .authorInfo .scrollButton {
+            width: 12%;
+            border: 2px solid black;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .portfolio .scrollButton {
+            width: 12%;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .author {
+            margin: 0 8.3%;
+            justify-content: center;
+        }
+        .authorPhoto img {
+            display: none;
+        }
+        .authorText {
+            margin-left: 0px;
+            text-align: center
+        }
+        .authorText>h1 {
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        .authorText p {
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .authorText p:last-child {
+            text-align: right;
+        }
+        
+        #contacts p>a {
+            font-size: 1em;
+        }
+    }
+    /* end of media queries section */

@@ -4,110 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <title>Jason Wood Theme</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About me</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
-        </nav>
-        <figure class="logo">
-            <img src="img/logo.png" alt="">
-            <figcaption>TM</figcaption>
-        </figure>
+    <div class="container">
+        <header id="home">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#authorInfo">About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <div><img src="img/logo.png" alt="">
+                    <p>TM</p>
+                </div>
 
-        <div class="logoText">
-            <span>Jwood</span><span>Photography</span>
-        </div>
-        <div class="actionScroll">
-            <p>Scrool down to see more</p>
-            <p>
-                <a href="#authorInfo"><img src="img/doublearrow.png" alt=""></a>
-            </p>
-        </div>
-    </header>
-    <main>
-        <section class="authorInfo" id="authorInfo">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About me</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
-            </nav>
-            <div class="author">
-                <div class="authorPhoto">
-                    <img src="img/jasonwood.png" alt="Jason Wood">
-                </div>
-                <div class="authorText">
-                    <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <p>Jason Wood</p>
-                </div>
+            </div>
+
+            <div class="logoText">
+                <span>Jwood</span><span>Photography</span>
             </div>
             <div class="actionScroll">
-                <p>keep scrolling, there is still more to come.</p>
+                <p>Scrool down to see more</p>
                 <p>
-                    <a href="#portfolio"><img src="img/doublearrow.png" alt=""></a>
+                    <a href="#authorInfo"><img class="scrollButton" src="img/doublearrow.png" alt=""></a>
                 </p>
             </div>
-        </section>
-        <section class="portfolio" id="portfolio">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About me</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
-            </nav>
-            <p>Portfolio</p>
-            <div class="photoGallery">
-                <div class="photoGallery1">
-                    <img src="img/porfolio1.png" alt="portfolio">
-                    <img src="img/porfolio2.png" alt="portfolio">
-                    <img src="img/porfolio3.png" alt="portfolio">
-                    <img src="img/porfolio4.png" alt="portfolio">
-                    <img src="img/porfolio5.png" alt="portfolio">
+        </header>
+        <main id="authorInfo">
+            <section class="authorInfo">
+
+                <div class="author">
+                    <div class="authorPhoto" id="aboutMe">
+                        <img src="img/jasonwood.png" alt="Jason Wood">
+                    </div>
+                    <div class="authorText">
+                        <h1>About Me</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Jason Wood</p>
+                    </div>
                 </div>
-                <div class="photoGallery2">
-                    <img src="img/porfolio6.png" alt="portfolio">
-                    <img src="img/porfolio7.png" alt="portfolio">
-                    <img src="img/porfolio8.png" alt="portfolio">
-                    <img src="img/porfolio9.png" alt="portfolio">
-                    <img src="img/porfolio10.png" alt="portfolio">
+                <div class="actionScroll">
+                    <p>keep scrolling, there is still more to come.</p>
+                    <p>
+                        <a href="#portfolio"><img class="scrollButton" src="img/doublearrowblack.png" alt=""></a>
+                    </p>
                 </div>
-            </div>
-            <div class="actionScroll">
-                <p>do you want to see it with your own eyes? Scroll!</p>
-                <p>
-                    <a href="#contacts"><img src="img/doublearrow.png" alt=""></a>
-                </p>
-            </div>
-        </section>
-        <section id="contacts">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About me</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
-            </nav>
-            <div class="contacts">
-                <p>Mail:</p>
-                <p><a href="mailto:Jason@wood.com">Jason@wood.com</a></p>
-                <p>Phone:</p>
-                <p><a href="tel:+44 212 432 444">+44 212 432 444</a></p>
-                <p>Social Media</p>
-                <p></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>DESIGNED by Pawel szymankiewicz</p>
-    </footer>
+            </section>
+            <section class="portfolio" id="portfolio">
+
+                <span>Portfolio</span>
+                <div class="photoGallery" id="photoGallery">
+                    <img src="img/portfolio1.png" alt="portfolio">
+                    <img src="img/portfolio2.png" alt="portfolio">
+                    <img src="img/portfolio3.png" alt="portfolio">
+                    <img src="img/portfolio4.png" alt="portfolio">
+                    <img src="img/portfolio5.png" alt="portfolio">
+                    <img src="img/portfolio6.png" alt="portfolio">
+                    <img src="img/portfolio7.png" alt="portfolio">
+                    <img src="img/portfolio8.png" alt="portfolio">
+                    <img src="img/portfolio9.png" alt="portfolio">
+                    <img src="img/portfolio10.png" alt="portfolio">
+                </div>
+                <div class="actionScroll">
+                    <p>do you want to see it with your own eyes? Scroll!</p>
+                    <p>
+                        <a href="#contacts"><img class="scrollButton" src="img/doublearrow.png" alt=""></a>
+                    </p>
+                </div>
+            </section>
+            <section id="contacts">
+
+                <div class="contacts">
+                    <p>Mail:</p>
+                    <p><a href="mailto:Jason@wood.com">Jason@wood.com</a></p>
+                    <p>Phone:</p>
+                    <p><a href="tel:+44 212 432 444">+44 212 432 444</a></p>
+                    <p>Social Media</p>
+                    <div class="socialIcons">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>DESIGNED by Pawel szymankiewicz</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
 </body>
 
 </html>
