@@ -113,15 +113,13 @@
     header {
         background-image: url(../img/bgheader.png);
         width: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
     }
     
     .portfolio {
-        background-image: url(../img/bgportfolio.png);
-    }
-    
-    .portfolio {
         width: 100%;
+        background-image: url(../img/bgportfolio.png);
         background-repeat: no-repeat;
     }
     
@@ -132,30 +130,32 @@
     /* srtucture section */
     
     .container {
-        max-width: 1920px;
+        max-width: 1800px;
         width: auto;
         margin: 0 auto;
         box-sizing: border-box;
     }
     
     header {
-        width: auto;
         flex-flow: column nowrap;
         padding-bottom: 27px;
     }
     
     nav {
         justify-content: center;
-        position: fixed;
-        margin: 0 3.125%;
-        padding: 25px 31.25%;
-        border-bottom: 2px solid #d8d8d8;
+        padding: 25px 0;
         flex-flow: row nowrap;
+    }
+    
+    .hr {
+        background-color: #d8d8d8;
+        margin: 0 3.125%;
+        padding: 2px 0 0 0;
     }
     
     ul {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: center;
         list-style: none;
         margin: 0;
@@ -163,7 +163,7 @@
     }
     
     li a {
-        padding: 0 15px;
+        padding: 0 35px;
         text-align: center;
         flex: 1 1 25%;
     }
@@ -224,7 +224,7 @@
     }
     
     .authorInfo {
-        padding-top: 115px;
+        padding-top: 45px;
     }
     
     .author {
@@ -270,10 +270,10 @@
     .photoGallery img:hover {
         box-shadow: 0 0 8px 4px #e8e8e8;
     }
-
-.portfolio .actionScroll {
-    padding-top: 45px;
-}
+    
+    .portfolio .actionScroll {
+        padding-top: 45px;
+    }
     
     .contacts {
         padding-top: 70px;
@@ -334,11 +334,7 @@
     /* end of srtucture section */
     /* media queries section */
     
-    @media (max-width:1740px) {
-        nav {
-            border: 0;
-        }
-    }
+    @media (max-width:1740px) {}
     
     @media (min-width: 1532px) and (max-width:1720px) {
         .author {
@@ -417,7 +413,7 @@
         }
     }
     
-@media (max-width:768px) {
+    @media (max-width:768px) {
         li a {
             font-weight: 600;
             font-size: 1em;
@@ -473,7 +469,6 @@
         .authorText p:last-child {
             text-align: right;
         }
-        
         #contacts p>a {
             font-size: 1em;
         }
