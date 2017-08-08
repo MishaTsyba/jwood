@@ -162,22 +162,22 @@
         left: 0;
         right: 0;
         max-width: 1920px;
-        width: 100%;
+        
         margin: 0 auto;
     }
     
     .hr {
         max-width: 1920px;
-        width: 100%;
+        width: 92%;
         background-color: #d8d8d8;
         padding: 2px 0 0 0;
         position: fixed;
         top: 75px;
-        left: 0;
+        left: 4%;
         right: 0;
     }
     
-    ul {
+    nav>ul {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -189,8 +189,11 @@
         -ms-flex-pack: center;
         justify-content: center;
         list-style: none;
-        margin: 0;
+        width: 100%;
+        margin: 0 5%;
         padding: 0;
+        border-bottom: 1px solid #d8d8d8;
+        padding-bottom: 25px;
     }
     
     li a {
@@ -543,8 +546,13 @@
     }
     
     @media (max-width: 480px) {
+        
+        
+        nav {
+            width: 91%;
+        }
+        
         li a {
-            
             padding: 0 5px;
             font-weight: 600;
             font-size: 0.8em;
