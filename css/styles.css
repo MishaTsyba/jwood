@@ -553,9 +553,9 @@
         }
         
         li a {
-            padding: 0 5px;
-            font-weight: 600;
-            font-size: 0.8em;
+            padding: 0 3px;
+            font-weight: 400;
+            font-size: 0.7em;
         }
         .logoText {
             font-size: 1.5em;
