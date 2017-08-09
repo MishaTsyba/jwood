@@ -160,7 +160,7 @@
 
     cursor: pointer;
 
-    color: white;
+    color: transparent;
     border: 0;
     outline: none;
     background: transparent;
@@ -178,8 +178,8 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 10px;
-    line-height: 30px;
+    font-size: 6px;
+    line-height: 20px;
 
     position: absolute;
     top: 0;
@@ -192,7 +192,7 @@
     text-align: center;
 
     opacity: .25;
-    color: white;
+    color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -200,5 +200,5 @@
 .slick-dots li.slick-active button:before
 {
     opacity: .75;
-    color: white;
+    color: black;
 }

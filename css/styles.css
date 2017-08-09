@@ -1,625 +1,760 @@
-    /* fonts section */
-    
-    @font-face {
-        font-family: 'nexa_boldregular';
-        src: url('../fonts/nexa_bold-webfont.woff2') format('woff2'), url('../fonts/nexa_bold-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+/* fonts section */
+
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('../fonts/nexa_bold-webfont.woff2') format('woff2'), url('../fonts/nexa_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa_lightregular';
+    src: url('../fonts/nexa_light-webfont.woff2') format('woff2'), url('../fonts/nexa_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'felt_tip_womanregular';
+    src: url('../fonts/felt_tip_woman-webfont.woff2') format('woff2'), url('../fonts/felt_tip_woman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* end of fonts section */
+
+
+/* text fotmat section */
+
+a,
+.logoText span,
+.authorText h1,
+.portfolio>span,
+.contacts p:nth-child(4),
+footer {
+    font-family: 'nexa_lightregular', Arial, sans-serif;
+    color: #d8d8d8;
+    text-transform: uppercase;
+}
+
+a {
+    font-weight: 400;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+figcaption,
+.actionScroll,
+.logoText span:first-child,
+.contacts p:nth-child(odd) {
+    font-family: 'nexa_boldregular', Arial, sans-serif;
+    color: #d8d8d8;
+    text-transform: uppercase;
+}
+
+.authorText p,
+.authorText h1,
+.contacts p:nth-child(odd),
+.contacts p:nth-child(4) {
+    color: #202020;
+}
+
+.authorText p {
+    font-family: 'OpenSans', Arial, sans-serif;
+    font-size: 1.7em;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.authorText p:last-child {
+    font-family: 'felt_tip_womanregular', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 2.2em;
+}
+
+.portfolio>span,
+.authorText>h1 {
+    font-size: 3.75em;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.logo p {
+    font-family: 'nexa_boldregular', Arial, sans-serif;
+    color: #f1f1f1;
+    font-size: 2.25em;
+    font-weight: 400;
+}
+
+.logoText {
+    color: #f1f1f1;
+    font-size: 3.75em;
+}
+
+.actionScroll p {
+    font-weight: 400;
+    font-size: 1.125em;
+}
+
+.authorInfo .actionScroll p {
+    color: #333333;
+}
+
+.contacts {
+    font-size: 3em;
+}
+
+#contacts p>a {
+    color: #202020;
+}
+
+
+/* end of text fotmat section */
+
+
+/* image and color section */
+
+.container {
+    background-color: #ffffff;
+}
+
+header {
+    background-image: url(../img/bgheader.png);
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.portfolio {
+    width: 100%;
+    background-image: url(../img/bgportfolio.png);
+    background-repeat: no-repeat;
+}
+
+.authorPhoto>img {
+    width: 100%;
+}
+
+
+/* end of image and color section */
+
+
+/* srtucture section */
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    padding-bottom: 27px;
+}
+
+nav {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+nav>ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    margin: 0 5%;
+    padding: 0;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 25px;
+}
+
+li {
+    text-align: center;
+    width: 15%;
+}
+
+li:last-child {
+    padding-right: 0;
+}
+
+.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding-top: 150px;
+}
+
+.logo div {
+    position: relative;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.logo p {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logoText {
+    text-align: center;
+    padding-top: 70px;
+}
+
+header>.actionScroll {
+    padding-top: 5px;
+}
+
+.actionScroll {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 25px;
+}
+
+header,
+nav,
+section,
+.author,
+.actionScroll,
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.authorInfo,
+.actionScroll,
+.portfolio,
+#contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+}
+
+.authorInfo {
+    padding-top: 135px;
+}
+
+.author {
+    margin: 0 8.3%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+
+.authorPhoto {
+    text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.authorText {
+    margin-left: 50px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.portfolio {
+    text-align: center;
+}
+
+.portfolio span {
+    display: inline-block;
+    text-align: center;
+    padding-top: 135px;
+    padding-bottom: 35px;
+}
+
+.photoGallery {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+
+.photoGallery img {
+    border: 1px solid #a8a8a8;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.photoGallery img:hover {
+    -webkit-box-shadow: 0 0 8px 4px #e8e8e8;
+    box-shadow: 0 0 8px 4px #e8e8e8;
+}
+
+.portfolio .actionScroll {
+    padding-top: 45px;
+}
+
+.contacts {
+    padding-top: 70px;
+}
+
+.contacts>p {
+    text-align: center;
+}
+
+.socialIcons {
+    text-align: center;
+}
+
+.fa {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 3em;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.fa:hover {
+    background: black;
+    color: white;
+}
+
+.socialIcons .fa-facebook {
+    color: black;
+}
+
+.socialIcons .fa-facebook:hover {
+    color: white;
+}
+
+.fa-twitter {
+    background: white;
+    color: black;
+}
+
+.fa-instagram {
+    background: white;
+    color: black;
+}
+
+#contacts {
+    padding-bottom: 75px;
+}
+
+footer {
+    line-height: 2em;
+    border-top: 1px solid #d8d8d8;
+    margin: 0 3.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.up-arrow {
+    display: none;
+}
+
+
+/* end of srtucture section */
+
+
+/* media queries section */
+
+@media (min-width: 1533px) and (max-width:1720px) {
+    .author {
+        margin: 0 8.3%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
-    
-    @font-face {
-        font-family: 'nexa_lightregular';
-        src: url('../fonts/nexa_light-webfont.woff2') format('woff2'), url('../fonts/nexa_light-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+    .authorPhoto {
+        text-align: center;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0.3 auto;
+        flex: 1 0.3 auto;
     }
-    
-    @font-face {
-        font-family: 'felt_tip_womanregular';
-        src: url('../fonts/felt_tip_woman-webfont.woff2') format('woff2'), url('../fonts/felt_tip_woman-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+    .authorText {
+        margin-left: 5%;
     }
-    /* end of fonts section */
-    /* text fotmat section */
-    
-    a,
-    .logoText span,
-    .authorText h1,
-    .portfolio>span,
-    .contacts p:nth-child(4),
-    footer {
-        font-family: 'nexa_lightregular', Arial, sans-serif;
-        color: #d8d8d8;
-        text-transform: uppercase;
-    }
-    
-    a {
-        font-weight: 400;
-        font-size: 1.4em;
-        text-decoration: none;
-    }
-    
-    figcaption,
-    .actionScroll,
-    .logoText span:first-child,
-    .contacts p:nth-child(odd) {
-        font-family: 'nexa_boldregular', Arial, sans-serif;
-        color: #d8d8d8;
-        text-transform: uppercase;
-    }
-    
-    .authorText p,
-    .authorText h1,
-    .contacts p:nth-child(odd),
-    .contacts p:nth-child(4) {
-        color: #202020;
-    }
-    
-    .authorText p {
-        font-family: 'OpenSans', Arial, sans-serif;
-        font-size: 1.6em;
-        font-weight: 300;
-        line-height: 2;
-    }
-    
-    .authorText p:last-child {
-        font-family: 'felt_tip_womanregular', Arial, sans-serif;
-        font-weight: 600;
-        font-size: 2.2em;
-    }
-    
-    .portfolio>span,
     .authorText>h1 {
-        font-size: 3.75em;
+        font-size: 2.5em;
         font-weight: 400;
-        line-height: 2;
+        line-height: 1;
     }
-    
-    .logo p {
-        color: #f1f1f1;
-        font-size: 2.25em;
+    .authorText p {
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1.8;
+    }
+}
+
+@media (min-width: 769px) and (max-width:1532px) {
+    li {
+        padding-right: 7%;
+    }
+    li a {
+        font-weight: 600;
+        font-size: 1.6em;
+        white-space: nowrap;
+    }
+    .actionScroll p:first-child {
+        display: none;
+    }
+    .actionScroll {
+        padding-bottom: 85px;
+    }
+    header .scrollButton {
+        width: 7%;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .authorInfo .scrollButton {
+        width: 7%;
+        border: 2px solid black;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .portfolio .scrollButton {
+        width: 7%;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .author {
+        margin: 0 8.3%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .authorPhoto img {
+        display: none;
+    }
+    .authorText {
+        margin-left: 0px;
+        text-align: center;
+        padding: 0 10%;
+    }
+    .authorText>h1 {
+        font-size: 3.5em;
         font-weight: 400;
+        line-height: 1.8;
     }
-    
+    .authorText p {
+        font-size: 2.2em;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+    .authorText p:last-child {
+        text-align: right;
+    }
+    #contacts p>a {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 481px) and (max-width:768px) {
+    li {
+        padding-right: 10%;
+    }
+    li a {
+        font-weight: 600;
+        font-size: 1.2em;
+        white-space: nowrap;
+    }
     .logoText {
-        color: #f1f1f1;
-        font-size: 3.75em;
+        font-size: 2em;
     }
-    
+    .actionScroll p:first-child {
+        display: none;
+    }
+    .actionScroll {
+        padding-bottom: 85px;
+    }
+    header .scrollButton {
+        width: 12%;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .authorInfo .scrollButton {
+        width: 12%;
+        border: 2px solid black;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .portfolio .scrollButton {
+        width: 12%;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .author {
+        margin: 0 8.3%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .authorPhoto img {
+        display: none;
+    }
+    .authorText {
+        margin-left: 0px;
+        text-align: center;
+        padding: 0 10%;
+    }
+    .authorText>h1 {
+        font-size: 2.2em;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+    .authorText p {
+        font-size: 1.4em;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+    .authorText p:last-child {
+        text-align: right;
+    }
+    #contacts p>a {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        padding-top: 50px;
+    }
+    .logoText {
+        font-size: 1.5em;
+        padding-top: 10px;
+    }
+    .logo p {
+        font-size: 1.5em;
+        font-weight: 600;
+        top: 5%;
+        right: 5%;
+    }
+    header>.actionScroll {
+        padding-top: 0;
+    }
+    .actionScroll p:first-child {
+        display: none;
+    }
     .actionScroll p {
         font-weight: 400;
-        font-size: 1.125em;
+        font-size: 0.325em;
     }
-    
-    .authorInfo .actionScroll p {
-        color: #333333;
+    .actionScroll {
+        padding-bottom: 50px;
     }
-    
+    header .scrollButton {
+        width: 12%;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .authorInfo .scrollButton {
+        width: 12%;
+        border: 2px solid black;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .portfolio .scrollButton {
+        width: 12%;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .authorInfo {
+        padding-top: 25px;
+    }
+    .authorInfo .actionScroll {
+        padding-top: 0;
+    }
+    .author {
+        margin: 0 8.3%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .authorPhoto img {
+        display: none;
+    }
+    .authorText {
+        margin-left: 0px;
+        text-align: center;
+        padding: 0 10%;
+    }
+    .authorText>h1 {
+        font-size: 1.6em;
+        font-weight: 600;
+        line-height: 1.6;
+    }
+    .authorText p {
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+    .authorText p:last-child {
+        text-align: right;
+        font-size: 1.6em;
+        line-height: 0.2;
+    }
+    .portfolio>span {
+        font-size: 2.5em;
+        line-height: 1.5;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .portfolio .actionScroll {
+        padding-top: 20px;
+    }
     .contacts {
-        font-size: 3em;
+        padding-top: 25px;
+        font-size: 2.2em;
+        line-height: 0.9;
     }
-    
-    #contacts p>a {
-        color: #202020;
+    .contacts p:nth-child(odd) {
+        font-size: 0.8em;
     }
-    /* end of text fotmat section */
-    /* image and color section */
-    
-    .container {
-        background-color: #ffffff;
-    }
-    
-    header {
-        background-image: url(../img/bgheader.png);
-        width: 100%;
-        background-repeat: no-repeat;
-    }
-    
-    .portfolio {
-        width: 100%;
-        background-image: url(../img/bgportfolio.png);
-        background-repeat: no-repeat;
-    }
-    
-    .authorPhoto>img {
-        width: 100%;
-    }
-    
-    img {
-        max-width: 100%;
-    }
-    /* end of image and color section */
-    /* srtucture section */
-    
-    .container {
-        max-width: 1920px;
-        width: 100%;
-        margin: 0 auto;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    
-    header {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-        flex-flow: column nowrap;
-        padding-bottom: 27px;
-    }
-    
-    nav {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        padding: 25px 0;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        max-width: 1920px;
-        
-        margin: 0 auto;
-    }
-    
-    .hr {
-        max-width: 1920px;
-        width: 92%;
-        background-color: #d8d8d8;
-        padding: 2px 0 0 0;
-        position: fixed;
-        top: 75px;
-        left: 4%;
-        right: 0;
-    }
-    
-    nav>ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        list-style: none;
-        width: 100%;
-        margin: 0 5%;
-        padding: 0;
-        border-bottom: 1px solid #d8d8d8;
+    #contacts {
         padding-bottom: 25px;
+    }
+    #contacts p>a {
+        font-size: 0.6em;
+    }
+    .fa {
+        font-size: 0.5em;
+        width: 5.5%;
+        height: 5%;
+    }
+    footer {
+        font-size: 0.6em;
+        font-weight: 700;
+        color: #a8a8a8;
+        line-height: 0em;
+    }
+    .up-arrow {
+        display: block;
+        position: fixed;
+        left: 84%;
+        bottom: 2%;
+    }
+    .fa-angle-double-up {
+        border: 0;
+        font-size: 1.5em;
+        color: #383838;
+        width: 0;
+        height: 0;
+        text-decoration: none;
+    }
+    .fa-angle-double-up:hover {
+        background: none;
+        color: #383838;
+    }
+}
+
+
+/* end of media queries section */
+
+
+/*test section*/
+
+.menu-icon {
+    display: none;
+    width: 27px;
+    height: 35px;
+    padding: 2px 7px 0px 4px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #57696d;
+    box-shadow: 0 0 8px 4px #e8e8e8;
+    opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .menu-icon {
+        display: block;
+        position: fixed;
+        right: 4%;
+        top: 4%;
+        z-index: 1;
+    }
+    nav {
+        display: block;
+        position: fixed;
+        top: 23%;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+    }
+    nav>ul {
+        display: none;
+        flex-flow: column nowrap;
+        padding: 5px 0;
+        margin: 0 auto;
+        border: 0;
+        border-radius: 55px;
+        background-color: #57696d;
+        opacity: 0.9;
+        width: 75%;
+    }
+    ul li {
+        width: 100%;
+        border-bottom: 1px solid #d8d8d8;
+    }
+    
+    li:last-child {
+       border: 0;
     }
     
     li a {
-        padding: 0 35px;
-        text-align: center;
-        -webkit-box-flex: 1;
-        -ms-flex: 1 1 25%;
-        flex: 1 1 25%;
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.7;
     }
-    
-    .logo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin: 0;
-        padding-top: 150px;
-    }
-    
-    .logo div {
-        position: relative;
-    }
-    
-    .logo p {
-        margin: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    
-    .logoText {
-        text-align: center;
-        padding-top: 70px;
-    }
-    
-    header>.actionScroll {
-        padding-top: 60px;
-    }
-    
-    .actionScroll {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
-        padding-top: 25px;
-    }
-    
-    header,
-    nav,
-    section,
-    .author,
-    .actionScroll,
-    .photoGallery,
-    footer {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    
-    .authorInfo,
-    .actionScroll,
-    .portfolio,
-    #contacts {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
-    }
-    
-    .photoGallery {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    }
-    
-    .authorInfo {
-        padding-top: 135px;
-    }
-    
-    .author {
-        margin: 0 8.3%;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-    }
-    
-    .authorPhoto {
-        text-align: center;
-        flex: 1 0 auto;
-    }
-    
-    .authorText {
-        margin-left: 50px;
-        flex: 1 1 auto;
-    }
-    
-    .portfolio {
-        text-align: center;
-        padding-bottom: 75px;
-    }
-    
-    .portfolio span {
-        display: inline-block;
-        text-align: center;
-        padding-top: 135px;
-        padding-bottom: 35px;
-    }
-    
-    .photoGallery {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        padding-bottom: 75px;
-    }
-    
-    .photoGallery img {
-        max-width: 100%;
-        margin: 0.75%;
-        border: 1px solid #a8a8a8;
-        -webkit-transition: 0.5s all;
-        -o-transition: 0.5s all;
-        transition: 0.5s all;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    
-    .photoGallery img:hover {
-        -webkit-box-shadow: 0 0 8px 4px #e8e8e8;
-        box-shadow: 0 0 8px 4px #e8e8e8;
-    }
-    
-    .portfolio .actionScroll {
-        padding-top: 45px;
-    }
-    
-    .contacts {
-        padding-top: 70px;
-    }
-    
-    .contacts>p {
-        text-align: center;
-    }
-    
-    .socialIcons {
-        text-align: center;
-    }
-    
-    .fa {
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        border-radius: 50%;
-        font-size: 44px;
-        padding: 10px;
-        text-decoration: none;
-    }
-    
-    .fa:hover {
-        background: black;
-        color: white;
-    }
-    
-    .socialIcons .fa-facebook {
-        color: black;
-    }
-    
-    .socialIcons .fa-facebook:hover {
-        color: white;
-    }
-    
-    .fa-twitter {
-        background: white;
-        color: black;
-    }
-    
-    .fa-instagram {
-        background: white;
-        color: black;
-    }
-    
-    #contacts {
-        padding-bottom: 14vh;
-    }
-    
-    footer {
-        line-height: 2em;
-        border-top: 1px solid #d8d8d8;
-        margin: 0 3.5%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-    /* end of srtucture section */
-    /* media queries section */
-    
-    @media (min-width: 1533px) and (max-width:1720px) {
-        .author {
-            margin: 0 8.3%;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        .authorPhoto img {
-            display: none;
-        }
-        .authorText {
-            margin-left: 0px;
-            text-align: center;
-            padding: 0 10%;
-        }
-        .authorText p:last-child {
-            text-align: right;
-        }
-    }
-    
-    @media (min-width: 769px) and (max-width:1532px) {
-        li a {
-            font-weight: 600;
-            font-size: 1em;
-        }
-        .actionScroll p:first-child {
-            display: none;
-        }
-        .actionScroll {
-            padding-bottom: 85px;
-        }
-        header .scrollButton {
-            width: 7%;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .authorInfo .scrollButton {
-            width: 7%;
-            border: 2px solid black;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .portfolio .scrollButton {
-            width: 7%;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .author {
-            margin: 0 8.3%;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        .authorPhoto img {
-            display: none;
-        }
-        .authorText {
-            margin-left: 0px;
-            text-align: center;
-            padding: 0 10%;
-        }
-        .authorText>h1 {
-            font-size: 3.5em;
-            font-weight: 400;
-            line-height: 1.8;
-        }
-        .authorText p {
-            font-size: 2.2em;
-            font-weight: 300;
-            line-height: 1.6;
-        }
-        .authorText p:last-child {
-            text-align: right;
-        }
-        #contacts p>a {
-            font-size: 1.2em;
-        }
-    }
-    
-    @media (min-width: 481px) and (max-width:768px) {
-        li a {
-            padding: 0px 40px;
-            font-weight: 600;
-            font-size: 1em;
-        }
-        .logoText {
-            font-size: 2em;
-        }
-        .actionScroll p:first-child {
-            display: none;
-        }
-        .actionScroll {
-            padding-bottom: 85px;
-        }
-        header .scrollButton {
-            width: 12%;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .authorInfo .scrollButton {
-            width: 12%;
-            border: 2px solid black;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .portfolio .scrollButton {
-            width: 12%;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .author {
-            margin: 0 8.3%;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        .authorPhoto img {
-            display: none;
-        }
-        .authorText {
-            margin-left: 0px;
-            text-align: center;
-            padding: 0 10%;
-        }
-        .authorText>h1 {
-            font-size: 2em;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-        .authorText p {
-            font-size: 1em;
-            font-weight: 300;
-            line-height: 1.4;
-        }
-        .authorText p:last-child {
-            text-align: right;
-        }
-        #contacts p>a {
-            font-size: 0.8em;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        
-        
-        nav {
-            width: 91%;
-        }
-        
-        li a {
-            padding: 0 3px;
-            font-weight: 400;
-            font-size: 0.7em;
-        }
-        .logoText {
-            font-size: 1.5em;
-        }
-        .actionScroll p:first-child {
-            display: none;
-        }
-        .actionScroll {
-            padding-bottom: 85px;
-        }
-        header .scrollButton {
-            width: 12%;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .authorInfo .scrollButton {
-            width: 12%;
-            border: 2px solid black;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .portfolio .scrollButton {
-            width: 12%;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 5px;
-        }
-        .author {
-            margin: 0 8.3%;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        .authorPhoto img {
-            display: none;
-        }
-        .authorText {
-            margin-left: 0px;
-            text-align: center;
-            padding: 0 10%;
-        }
-        .authorText>h1 {
-            font-size: 2em;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-        .authorText p {
-            font-size: 1em;
-            font-weight: 300;
-            line-height: 1.4;
-        }
-        .authorText p:last-child {
-            text-align: right;
-        }
-        .portfolio>span {
-            font-size: 2.5em;
-            line-height: 1.5;
-        }
-        .contacts p:nth-child(odd) {
-            font-size: 0.8em;
-        }
-        #contacts p>a {
-            font-size: 0.6em;
-        }
-    }
-    /* end of media queries section */
+}
