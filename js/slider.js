@@ -40,5 +40,5 @@ $('#photoGallery').slick({
 });
 
 $('.menu-icon').click(function(){
-    $('.menu').toggle();
+    $('.nav').toggle();
 });

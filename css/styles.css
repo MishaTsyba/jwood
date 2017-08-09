@@ -702,7 +702,7 @@ footer {
 /* end of media queries section */
 
 
-/*test section*/
+/*responsive menu section*/
 
 .menu-icon {
     display: none;
@@ -725,7 +725,7 @@ footer {
         z-index: 1;
     }
     nav {
-        display: block;
+        display: none;
         position: fixed;
         top: 23%;
         padding: 0;
@@ -733,7 +733,7 @@ footer {
         z-index: 1;
     }
     nav>ul {
-        display: none;
+        display: flex;
         flex-flow: column nowrap;
         padding: 5px 0;
         margin: 0 auto;
