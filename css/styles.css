@@ -29,7 +29,7 @@
 
 a,
 .logoText span,
-.authorText h1,
+.authorText h2,
 .portfolio>span,
 .contacts p:nth-child(4),
 footer {
@@ -54,7 +54,7 @@ figcaption,
 }
 
 .authorText p,
-.authorText h1,
+.authorText h2,
 .contacts p:nth-child(odd),
 .contacts p:nth-child(4) {
     color: #202020;
@@ -78,13 +78,13 @@ figcaption,
 }
 
 .portfolio>span,
-.authorText>h1 {
+.authorText h2 {
     font-size: 3.75em;
     font-weight: 400;
     line-height: 2;
 }
 
-.logo p {
+.logo span {
     font-family: 'nexa_boldregular', Arial, sans-serif;
     color: #f1f1f1;
     font-size: 2.25em;
@@ -109,7 +109,7 @@ figcaption,
     font-size: 3em;
 }
 
-#contacts p>a {
+.contacts p>a {
     color: #202020;
 }
 
@@ -159,6 +159,7 @@ header {
     -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
     padding-bottom: 5px;
+    height: 100vh;
 }
 
 nav {
@@ -228,7 +229,7 @@ li:last-child {
     width: auto;
 }
 
-.logo p {
+.logo span {
     margin: 0;
     position: absolute;
     top: 0;
@@ -266,7 +267,7 @@ footer {
 .authorInfo,
 .actionScroll,
 .portfolio,
-#contacts {
+.contacts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
@@ -338,6 +339,7 @@ footer {
 
 .contacts {
     padding-top: 70px;
+    padding-bottom: 30px;
 }
 
 .contacts>p {
@@ -346,10 +348,6 @@ footer {
 
 .socialIcons {
     text-align: center;
-}
-
-#contacts {
-    padding-bottom: 30px;
 }
 
 footer {
@@ -378,7 +376,7 @@ footer {
 
 /* media queries section */
 
-@media (min-width: 1533px) and (max-width:1720px) {
+@media (min-width: 1200px) and (max-width:1720px) {
     .author {
         margin: 0 8.3%;
         -webkit-box-pack: center;
@@ -394,7 +392,7 @@ footer {
     .authorText {
         margin-left: 5%;
     }
-    .authorText>h1 {
+    .authorText h2 {
         font-size: 2.5em;
         font-weight: 400;
         line-height: 1;
@@ -406,7 +404,7 @@ footer {
     }
 }
 
-@media (min-width: 769px) and (max-width:1532px) {
+@media (min-width: 769px) and (max-width:1200px) {
     li {
         padding-right: 7%;
     }
@@ -453,7 +451,7 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText>h1 {
+    .authorText h2 {
         font-size: 3.5em;
         font-weight: 400;
         line-height: 1.8;
@@ -466,7 +464,7 @@ footer {
     .authorText p:last-child {
         text-align: right;
     }
-    #contacts p>a {
+    .contacts p>a {
         font-size: 1.2em;
     }
 }
@@ -480,8 +478,8 @@ footer {
         font-size: 1.2em;
         white-space: nowrap;
     }
-    .logoText {
-        font-size: 2em;
+    h1 {
+        font-size: 1em;
     }
     .actionScroll p:first-child {
         display: none;
@@ -521,7 +519,7 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText>h1 {
+    .authorText h2 {
         font-size: 2.2em;
         font-weight: 600;
         line-height: 1.6;
@@ -534,7 +532,7 @@ footer {
     .authorText p:last-child {
         text-align: right;
     }
-    #contacts p>a {
+    .contacts p>a {
         font-size: 0.8em;
     }
 }
@@ -543,11 +541,11 @@ footer {
     .logo {
         padding-top: 50px;
     }
-    .logoText {
-        font-size: 1.5em;
+    h1  {
+        font-size: 0.5em;
         padding-top: 10px;
     }
-    .logo p {
+    .logo span {
         font-size: 1.5em;
         font-weight: 600;
         top: 5%;
@@ -604,7 +602,7 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText>h1 {
+    .authorText h2 {
         font-size: 1.6em;
         font-weight: 600;
         line-height: 1.6;
@@ -630,16 +628,15 @@ footer {
     }
     .contacts {
         padding-top: 25px;
+        padding-bottom: 25px;
         font-size: 2.2em;
         line-height: 0.9;
     }
     .contacts p:nth-child(odd) {
         font-size: 0.6em;
     }
-    #contacts {
-        padding-bottom: 25px;
-    }
-    #contacts p>a {
+    
+    .contacts p>a {
         font-size: 0.6em;
     }
     footer {

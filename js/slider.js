@@ -38,7 +38,3 @@ $('#photoGallery').slick({
     // instead of a settings object
   ]
 });
-
-$('.menu-icon').click(function(){
-    $('.nav').toggle();
-});

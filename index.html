@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Jason Wood Theme</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/styles.css">
@@ -15,35 +15,27 @@
 <body>
     <div class="container">
         <div class="menu-icon"><img src="img/menuiconwhite.png" alt="menu-icon">
-        <nav class="nav">
-
-                <ul class="menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#authorInfo">About me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                </ul>
         </div>
         <header id="home">
-            <nav>
+            <nav class="menu">
 
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#authorInfo">About me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contacts">Contact</a></li>
+                    <li class="menu__item"><a href="#home">Home</a></li>
+                    <li class="menu__item"><a href="#authorInfo">About me</a></li>
+                    <li class="menu__item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="menu__item"><a href="#contacts">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="logo">
                 <div><img src="img/logo.png" alt="">
-                    <p>TM</p>
+                    <span>TM</span>
                 </div>
 
             </div>
 
             <div class="logoText">
-                <span>Jwood</span><span>Photography</span>
+                <h1><span>Jwood</span><span>Photography</span></h1>
             </div>
             <div class="actionScroll">
                 <p>Scrool down to see more</p>
@@ -60,7 +52,7 @@
                         <img src="img/jasonwood.png" alt="Jason Wood">
                     </div>
                     <div class="authorText">
-                        <h1>About Me</h1>
+                        <h2>About Me</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <p>Jason Wood</p>
@@ -75,7 +67,7 @@
             </section>
             <section class="portfolio" id="portfolio">
 
-                <span>Portfolio</span>
+                <h2>Portfolio</h2>
                 <div class="photoGallery" id="photoGallery">
                     <img src="img/portfolio1.png" alt="portfolio">
                     <img src="img/portfolio2.png" alt="portfolio">
@@ -97,9 +89,7 @@
                     </p>
                 </div>
             </section>
-            <section id="contacts">
-
-                <div class="contacts">
+            <div class="contacts" id="contacts">
                     <p>Mail:</p>
                     <p><a href="mailto:Jason@wood.com">Jason@wood.com</a></p>
                     <p>Phone:</p>
@@ -110,8 +100,7 @@
                         <a href="#"><span class="social-icon twitter"></span></a>
                         <a href="#"><span class="social-icon instagram"></span></a>
                     </div>
-                </div>
-            </section>
+            </div>
         </main>
         <footer>
             <p>DESIGNED by Pawel szymankiewicz</p>
@@ -123,6 +112,7 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script src="js/hamburger.js"></script>
 </body>
 
 </html>
