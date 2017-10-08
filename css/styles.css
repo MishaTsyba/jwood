@@ -29,7 +29,7 @@
 
 a,
 .logoText span,
-.authorText h2,
+.authorText h2, .portfolio h2, 
 .portfolio>span,
 .contacts p:nth-child(4),
 footer {
@@ -127,6 +127,8 @@ header {
     background-image: url(../img/bgheader.png);
     width: 100%;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .portfolio {
@@ -153,13 +155,21 @@ header {
     box-sizing: border-box;
 }
 
+.menu__container{
+    position: relative; 
+}
+
 header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
-    padding-bottom: 5px;
-    height: 100vh;
+    position: relative;
+}
+
+.header__container {
+    min-height: 100vh;
+    position: relative;
 }
 
 nav {
@@ -178,6 +188,7 @@ nav {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
+    z-index: 1;
 }
 
 nav>ul {
@@ -216,34 +227,33 @@ li:last-child {
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
-    padding-top: 150px;
+    padding-top: 20vh;
+    
 }
 
 .logo div {
     position: relative;
+    
 }
 
 .logo img {
-    max-width: 100%;
+    max-height: 45vh;
     height: auto;
     width: auto;
+    display: inline-block;
 }
 
-.logo span {
+/*.logo span {
     margin: 0;
     position: absolute;
     top: 0;
     right: 0;
-}
+}*/
 
 .logoText {
     text-align: center;
-    padding-top: 15%;
+    /*padding-top: 20vh;*/
 }
-
-/*header>.actionScroll {
-    padding-top: 80px;
-}*/
 
 .actionScroll {
     -webkit-box-pack: center;
@@ -252,6 +262,13 @@ li:last-child {
     text-align: center;
     /*padding-top: 25px;*/
 }
+
+/*header .actionScroll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}*/
 
 header,
 nav,
@@ -278,8 +295,12 @@ footer {
     flex-flow: column nowrap;
 }
 
+.actionScroll p {
+    margin: 3vh 0 0 0;
+}
+
 .authorInfo {
-    padding-top: 135px;
+    padding-top: 110px;
 }
 
 .author {
@@ -311,6 +332,11 @@ footer {
     text-align: center;
 }
 
+.portfolio h2 {
+    color: #ffffff;
+    padding-top: 80px;
+}
+
 .portfolio span {
     display: inline-block;
     text-align: center;
@@ -337,9 +363,14 @@ footer {
     box-shadow: 0 0 8px 4px #e8e8e8;
 }
 
-.portfolio .actionScroll {
-    padding-top: 115px;
+.slick-dots li button {
+    color: #ffffff;
+    z-index: 1;
 }
+
+/*.portfolio .actionScroll {
+    padding-top: 115px;
+}*/
 
 .contacts {
     padding-top: 70px;
@@ -380,7 +411,9 @@ footer {
 
 /* media queries section */
 
-@media (min-width: 1200px) and (max-width:1720px) {
+@media (min-width: 1200px) {
+    
+
     .author {
         margin: 0 8.3%;
         -webkit-box-pack: center;
@@ -396,7 +429,7 @@ footer {
     .authorText {
         margin-left: 5%;
     }
-    .authorText h2 {
+    .authorText h2, .portfolio h2 {
         font-size: 2.5em;
         font-weight: 400;
         line-height: 1;
@@ -408,7 +441,7 @@ footer {
     }
 }
 
-@media (min-width: 769px) and (max-width:1200px) {
+@media (min-width: 768px) and (max-width:1199px) {
     li {
         padding-right: 7%;
     }
@@ -417,26 +450,30 @@ footer {
         font-size: 1.6em;
         white-space: nowrap;
     }
-    .actionScroll p:first-child {
-        display: none;
+
+    h1 {
+        font-size: 1.4em;
     }
+    /*.actionScroll p:first-child {
+        display: none;
+    }*/
     .actionScroll {
-        padding-bottom: 85px;
+        /*padding-bottom: 85px;*/
     }
     header .scrollButton {
-        width: 7%;
+        /*width: 7%;*/
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
     }
     .authorInfo .scrollButton {
-        width: 7%;
+        /*width: 7%;*/
         border: 2px solid black;
         border-radius: 50%;
         padding: 5px;
     }
     .portfolio .scrollButton {
-        width: 7%;
+        /*width: 7%;*/
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
@@ -455,7 +492,7 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText h2 {
+    .authorText h2, .portfolio h2 {
         font-size: 3.5em;
         font-weight: 400;
         line-height: 1.8;
@@ -473,7 +510,7 @@ footer {
     }
 }
 
-@media (min-width: 481px) and (max-width:768px) {
+@media (min-width: 481px) and (max-width:767px) {
     li {
         padding-right: 10%;
     }
@@ -489,22 +526,22 @@ footer {
         display: none;
     }
     .actionScroll {
-        padding-bottom: 85px;
+        /*padding-bottom: 85px;*/
     }
     header .scrollButton {
-        width: 12%;
+        /*width: 12%;*/
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
     }
     .authorInfo .scrollButton {
-        width: 12%;
+        /*width: 12%;*/
         border: 2px solid black;
         border-radius: 50%;
         padding: 5px;
     }
     .portfolio .scrollButton {
-        width: 12%;
+        /*width: 12%;*/
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
@@ -523,7 +560,7 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText h2 {
+    .authorText h2, .portfolio h2 {
         font-size: 2.2em;
         font-weight: 600;
         line-height: 1.6;
@@ -543,11 +580,11 @@ footer {
 
 @media (max-width: 480px) {
     .logo {
-        padding-top: 50px;
+        padding-top: 10vh;
     }
     h1  {
-        font-size: 0.5em;
-        padding-top: 10px;
+        font-size: 0.8em;
+        /*padding-top: 10px;*/
     }
     .logo span {
         font-size: 1.5em;
@@ -566,22 +603,22 @@ footer {
         font-size: 0.325em;
     }
     .actionScroll {
-        padding-bottom: 50px;
+        /*padding-bottom: 50px;*/
     }
     header .scrollButton {
-        width: 12%;
+        /*width: 12%;*/
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
     }
     .authorInfo .scrollButton {
-        width: 12%;
+        /*width: 12%;*/
         border: 2px solid black;
         border-radius: 50%;
         padding: 5px;
     }
     .portfolio .scrollButton {
-        width: 12%;
+        /*width: 12%;*/
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
@@ -681,7 +718,7 @@ footer {
 
 @media (max-width: 480px) {
     .menu-icon {
-        display: block;
+        display: none;
         position: fixed;
         right: 3%;
         top: 3%;
@@ -722,6 +759,10 @@ footer {
         font-size: 1.5em;
         font-weight: 600;
         line-height: 1.7;
+    }
+
+    .portfolio h2 {
+        padding-top: 0;
     }
 }
 
