@@ -12,20 +12,26 @@ $('#photoGallery').slick({
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 4,
+                centerMode: true,
+        centerPadding: '40px',
         }
     },
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 2,
+                centerMode: true,
+        centerPadding: '40px',
         }
     },
         {
             breakpoint: 480,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
+                centerMode: true,
+        centerPadding: '40px',
          }
     }
     // You can unslick at a given breakpoint now by adding:

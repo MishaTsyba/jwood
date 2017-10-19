@@ -79,7 +79,7 @@ figcaption,
 
 .portfolio>span,
 .authorText h2 {
-    font-size: 3.75em;
+    font-size: 3em;
     font-weight: 400;
     line-height: 2;
 }
@@ -126,6 +126,7 @@ figcaption,
 header {
     background-image: url(../img/bgheader.png);
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -135,6 +136,7 @@ header {
     width: 100%;
     background-image: url(../img/bgportfolio.png);
     background-repeat: no-repeat;
+    
 }
 
 .authorPhoto>img {
@@ -160,6 +162,7 @@ header {
 }
 
 header {
+    height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column nowrap;
@@ -168,7 +171,6 @@ header {
 }
 
 .header__container {
-    min-height: 100vh;
     position: relative;
 }
 
@@ -228,7 +230,7 @@ li:last-child {
     justify-content: center;
     margin: 0;
     padding-top: 20vh;
-    
+    max-height: 40vh;
 }
 
 .logo div {
@@ -237,8 +239,7 @@ li:last-child {
 }
 
 .logo img {
-    max-height: 40vh;
-    height: auto;
+    height: 40vh;
     width: auto;
     display: inline-block;
 }
@@ -252,7 +253,13 @@ li:last-child {
 
 .logoText {
     text-align: center;
-    /*padding-top: 20vh;*/
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
 }
 
 .actionScroll {
@@ -263,12 +270,12 @@ li:last-child {
     /*padding-top: 25px;*/
 }
 
-/*header .actionScroll {
+header .actionScroll {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}*/
+    left: 0;
+    right: 0;
+}
 
 header,
 nav,
@@ -300,7 +307,7 @@ footer {
 }
 
 .authorInfo {
-    padding-top: 110px;
+    padding-top: 80px;
 }
 
 .author {
@@ -312,6 +319,7 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    padding-bottom: 25px;
 }
 
 .authorPhoto {
@@ -319,6 +327,7 @@ footer {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    width: 50%;
 }
 
 .authorText {
@@ -347,6 +356,7 @@ footer {
 .photoGallery {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    padding-bottom: 45px;
 }
 
 .photoGallery img {
@@ -411,9 +421,56 @@ footer {
 
 /* media queries section */
 
-@media (min-width: 1200px) {
-    
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .authorText p {
+        font-size: 1.6em;
+        font-weight: 300;
+        line-height: 1.8;
+    }
+    .contacts p:nth-child(odd) {
+        font-size: 0.7em;
+    }
+    .contacts p>a {
+        font-size: 1em;
+    }
+}
 
+@media (min-width: 1366px) and (max-width: 1439px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    li a {
+        font-weight: 600;
+        font-size: 1.6em;
+        white-space: nowrap;
+    }
+    .authorText p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.8;
+    }
+    .contacts p:nth-child(odd) {
+        font-size: 0.6em;
+    }
+    .contacts p>a {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1365px) {
+    
+    h1 {
+        font-size: 1.4em;
+    }
+
+    li a {
+        font-weight: 600;
+        font-size: 1.4em;
+        white-space: nowrap;
+    }
     .author {
         margin: 0 8.3%;
         -webkit-box-pack: center;
@@ -423,8 +480,8 @@ footer {
     .authorPhoto {
         text-align: center;
         -webkit-box-flex: 1;
-        -ms-flex: 1 0.3 auto;
-        flex: 1 0.3 auto;
+        flex: 1 0 auto;
+        width: 60%;
     }
     .authorText {
         margin-left: 5%;
@@ -435,24 +492,30 @@ footer {
         line-height: 1;
     }
     .authorText p {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: 300;
         line-height: 1.8;
     }
+    .contacts p:nth-child(odd) {
+        font-size: 0.5em;
+    }
+    .contacts p>a {
+        font-size: 0.8em;
+    }
 }
 
-@media (min-width: 768px) and (max-width:1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     li {
         padding-right: 7%;
     }
     li a {
         font-weight: 600;
-        font-size: 1.6em;
+        font-size: 1.2em;
         white-space: nowrap;
     }
 
     h1 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     /*.actionScroll p:first-child {
         display: none;
@@ -484,7 +547,7 @@ footer {
         -ms-flex-pack: center;
         justify-content: center;
     }
-    .authorPhoto img {
+    .authorPhoto {
         display: none;
     }
     .authorText {
@@ -493,20 +556,23 @@ footer {
         padding: 0 10%;
     }
     .authorText h2, .portfolio h2 {
-        font-size: 3.5em;
+        font-size: 1.8em;
         font-weight: 400;
         line-height: 1.8;
     }
     .authorText p {
-        font-size: 2.2em;
+        font-size: 1.1em;
         font-weight: 300;
         line-height: 1.6;
     }
     .authorText p:last-child {
         text-align: right;
     }
+    .contacts p:nth-child(odd) {
+        font-size: 0.5em;
+    }
     .contacts p>a {
-        font-size: 1.2em;
+        font-size: 0.7em;
     }
 }
 
@@ -516,11 +582,11 @@ footer {
     }
     li a {
         font-weight: 600;
-        font-size: 1.2em;
+        font-size: 1em;
         white-space: nowrap;
     }
     h1 {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .actionScroll p:first-child {
         display: none;
@@ -528,23 +594,27 @@ footer {
     .actionScroll {
         /*padding-bottom: 85px;*/
     }
-    header .scrollButton {
-        /*width: 12%;*/
+    /* header .scrollButton {
+        width: 12%;
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
     }
     .authorInfo .scrollButton {
-        /*width: 12%;*/
+        width: 12%;
         border: 2px solid black;
         border-radius: 50%;
         padding: 5px;
     }
     .portfolio .scrollButton {
-        /*width: 12%;*/
+        width: 12%;
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
+    } */
+
+    .scrollButton {
+        display: none;
     }
     .author {
         margin: 0 8.3%;
@@ -552,7 +622,7 @@ footer {
         -ms-flex-pack: center;
         justify-content: center;
     }
-    .authorPhoto img {
+    .authorPhoto {
         display: none;
     }
     .authorText {
@@ -561,30 +631,35 @@ footer {
         padding: 0 10%;
     }
     .authorText h2, .portfolio h2 {
-        font-size: 2.2em;
+        font-size: 1.8em;
         font-weight: 600;
         line-height: 1.6;
     }
     .authorText p {
-        font-size: 1.4em;
+        font-size: 1.1em;
         font-weight: 300;
         line-height: 1.6;
     }
     .authorText p:last-child {
         text-align: right;
     }
+
+    .contacts p:nth-child(odd) {
+        font-size: 0.5em;
+    }
+    
     .contacts p>a {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        padding-top: 10vh;
+        padding-top: 20vh;
     }
     h1  {
-        font-size: 0.7em;
-        /*padding-top: 10px;*/
+        font-size: 0.6em;
+        
     }
     .logo span {
         font-size: 1.5em;
@@ -605,23 +680,27 @@ footer {
     .actionScroll {
         /*padding-bottom: 50px;*/
     }
-    header .scrollButton {
-        /*width: 12%;*/
+    /* header .scrollButton {
+        width: 12%;
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
     }
     .authorInfo .scrollButton {
-        /*width: 12%;*/
+        width: 12%;
         border: 2px solid black;
         border-radius: 50%;
         padding: 5px;
     }
     .portfolio .scrollButton {
-        /*width: 12%;*/
+        width: 12%;
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
+    } */
+
+    .scrollButton {
+        display: none;
     }
     .authorInfo {
         padding-top: 25px;
@@ -635,7 +714,7 @@ footer {
         -ms-flex-pack: center;
         justify-content: center;
     }
-    .authorPhoto img {
+    .authorPhoto {
         display: none;
     }
     .authorText {
@@ -644,12 +723,12 @@ footer {
         padding: 0 10%;
     }
     .authorText h2 {
-        font-size: 1.6em;
+        font-size: 1.2em;
         font-weight: 600;
         line-height: 1.6;
     }
     .authorText p {
-        font-size: 0.9em;
+        font-size: 0.7em;
         font-weight: 300;
         line-height: 1.4;
     }
@@ -674,7 +753,7 @@ footer {
         line-height: 0.9;
     }
     .contacts p:nth-child(odd) {
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
     
     .contacts p>a {
