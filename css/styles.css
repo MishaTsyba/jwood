@@ -29,7 +29,8 @@
 
 a,
 .logoText span,
-.authorText h2, .portfolio h2, 
+.authorText h2,
+.portfolio h2,
 .portfolio>span,
 .contacts p:nth-child(4),
 footer {
@@ -136,7 +137,6 @@ header {
     width: 100%;
     background-image: url(../img/bgportfolio.png);
     background-repeat: no-repeat;
-    
 }
 
 .authorPhoto>img {
@@ -157,8 +157,8 @@ header {
     box-sizing: border-box;
 }
 
-.menu__container{
-    position: relative; 
+.menu__container {
+    position: relative;
 }
 
 header {
@@ -235,7 +235,6 @@ li:last-child {
 
 .logo div {
     position: relative;
-    
 }
 
 .logo img {
@@ -243,6 +242,7 @@ li:last-child {
     width: auto;
     display: inline-block;
 }
+
 
 /*.logo span {
     margin: 0;
@@ -303,7 +303,7 @@ footer {
 }
 
 .actionScroll p {
-    margin: 2vh 0 0 0;
+    margin-top: 2vh;
 }
 
 .authorInfo {
@@ -377,6 +377,7 @@ footer {
     color: #ffffff;
     z-index: 1;
 }
+
 
 /*.portfolio .actionScroll {
     padding-top: 115px;
@@ -461,11 +462,9 @@ footer {
 }
 
 @media (min-width: 1200px) and (max-width: 1365px) {
-    
     h1 {
         font-size: 1.4em;
     }
-
     li a {
         font-weight: 600;
         font-size: 1.4em;
@@ -486,7 +485,8 @@ footer {
     .authorText {
         margin-left: 5%;
     }
-    .authorText h2, .portfolio h2 {
+    .authorText h2,
+    .portfolio h2 {
         font-size: 2.5em;
         font-weight: 400;
         line-height: 1;
@@ -513,7 +513,6 @@ footer {
         font-size: 1.2em;
         white-space: nowrap;
     }
-
     h1 {
         font-size: 1.2em;
     }
@@ -555,7 +554,8 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText h2, .portfolio h2 {
+    .authorText h2,
+    .portfolio h2 {
         font-size: 1.8em;
         font-weight: 400;
         line-height: 1.8;
@@ -592,29 +592,31 @@ footer {
         display: none;
     }
     .actionScroll {
-        /*padding-bottom: 85px;*/
+        display: none;
+        /* text-align: center;
+        padding-bottom: 3vh; */
     }
-    /* header .scrollButton {
-        width: 12%;
+
+    header .scrollButton {
+        width:5%;
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
     }
     .authorInfo .scrollButton {
-        width: 12%;
+        width: 5%;
         border: 2px solid black;
         border-radius: 50%;
         padding: 5px;
     }
     .portfolio .scrollButton {
-        width: 12%;
+        width: 5%;
         border: 2px solid white;
         border-radius: 50%;
         padding: 5px;
-    } */
-
+    }
     .scrollButton {
-        display: none;
+        display: block;
     }
     .author {
         margin: 0 8.3%;
@@ -630,7 +632,8 @@ footer {
         text-align: center;
         padding: 0 10%;
     }
-    .authorText h2, .portfolio h2 {
+    .authorText h2,
+    .portfolio h2 {
         font-size: 1.8em;
         font-weight: 600;
         line-height: 1.6;
@@ -643,11 +646,9 @@ footer {
     .authorText p:last-child {
         text-align: right;
     }
-
     .contacts p:nth-child(odd) {
         font-size: 0.5em;
     }
-    
     .contacts p>a {
         font-size: 0.7em;
     }
@@ -657,9 +658,8 @@ footer {
     .logo {
         padding-top: 20vh;
     }
-    h1  {
+    h1 {
         font-size: 0.6em;
-        
     }
     .logo span {
         font-size: 1.5em;
@@ -698,12 +698,11 @@ footer {
         border-radius: 50%;
         padding: 5px;
     } */
-
     .scrollButton {
         display: none;
     }
     .authorInfo {
-        padding-top: 25px;
+        padding-top: 35px;
     }
     .authorInfo .actionScroll {
         padding-top: 0;
@@ -723,12 +722,12 @@ footer {
         padding: 0 10%;
     }
     .authorText h2 {
-        font-size: 1.2em;
+        font-size: 1.5em;
         font-weight: 600;
         line-height: 1.6;
     }
     .authorText p {
-        font-size: 0.7em;
+        font-size: 0.9em;
         font-weight: 300;
         line-height: 1.4;
     }
@@ -743,8 +742,13 @@ footer {
         padding-top: 15px;
         padding-bottom: 15px;
     }
-    .portfolio .actionScroll {
+    /* .portfolio .actionScroll {
         padding-top: 30px;
+    } */
+    .portfolio .actionScroll p:first-child {
+        display: block;
+        font-size: 0.9em;
+        line-height: 1.8;
     }
     .contacts {
         padding-top: 25px;
@@ -755,7 +759,6 @@ footer {
     .contacts p:nth-child(odd) {
         font-size: 0.5em;
     }
-    
     .contacts p>a {
         font-size: 0.6em;
     }
@@ -768,11 +771,12 @@ footer {
     .up-arrow {
         display: block;
         position: fixed;
-        left: 83%;
-        bottom: 3%;
+        left: 82%;
+        bottom: 5%;
         width: 37px;
         height: 37px;
         text-align: center;
+        padding: 5px;
     }
 }
 
@@ -782,7 +786,60 @@ footer {
 
 /*responsive menu section*/
 
-.menu-icon {
+.burger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #a8a8a8;
+    cursor: pointer;
+    box-shadow: 0 0 8px 4px #e8e8e8;
+}
+
+.burger__line {
+    position: absolute;
+    left: 15%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.burger__line--top {
+    top: 8px;
+    transition: 1s;
+}
+
+.burger__line--middle {
+    top: 18px;
+    transition: 1s;
+}
+
+.burger__line--bottom {
+    top: 28px;
+    transition: 1s;
+}
+
+.burger.active .burger__line--top {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.burger.active .burger__line--middle {
+    top: 15px;
+    opacity: 0;
+}
+
+.burger.active .burger__line--bottom {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+/* .menu-icon {
     display: none;
     width: 30px;
     height: 38px;
@@ -793,25 +850,28 @@ footer {
     -webkit-box-shadow: 0 0 8px 4px #e8e8e8;
     box-shadow: 0 0 8px 4px #e8e8e8;
     opacity: 0.9;
-}
+} */
 
 @media (max-width: 480px) {
-    .menu-icon {
-        display: none;
+    .burger {
+        display: block;
         position: fixed;
-        right: 3%;
-        top: 3%;
+        right: 5%;
+        top: 5%;
         z-index: 1;
     }
-    nav {
+    .menu {
         display: none;
+    }
+    .menu.show {
+        display: block;
         position: fixed;
         top: 23%;
         padding: 0;
         margin: 0;
         z-index: 1;
     }
-    nav>ul {
+    .menu__list {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -827,19 +887,19 @@ footer {
         opacity: 0.9;
         width: 75%;
     }
-    ul li {
+    .menu__item {
         width: 100%;
         border-bottom: 1px solid #d8d8d8;
+        padding: 15px 0;
     }
-    li:last-child {
+    .menu__item:last-child {
         border: 0;
     }
-    li a {
+    .menu__item a {
         font-size: 1.5em;
         font-weight: 600;
         line-height: 1.7;
     }
-
     .portfolio h2 {
         padding-top: 0;
     }

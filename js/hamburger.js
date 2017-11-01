@@ -1,10 +1,8 @@
+"use strict";
 $(document).ready(function() {
-	$('.menu-icon').click(function(){
-    	
-    	if ($('.menu').is(':visible')) {
-    		$('.menu').slideUp();
-    	} else {
-    		$('.menu').slideDown();
-    	}
+	var nav = $('.menu');
+	$(document).on('click', '.burger, .menu', function(){		
+		$('.burger').toggleClass('active');
+		nav.toggleClass('show');
 	});
-})
+});
